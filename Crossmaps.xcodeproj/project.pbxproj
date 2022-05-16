@@ -1,0 +1,1141 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 47;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		EE02FD1724F76EE9005A662D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE02FD1624F76EE9005A662D /* AppDelegate.swift */; };
+		EE02FD1924F76EE9005A662D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE02FD1824F76EE9005A662D /* ViewController.swift */; };
+		EE02FD1B24F76EEA005A662D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EE02FD1A24F76EEA005A662D /* Assets.xcassets */; };
+		EE02FD1E24F76EEA005A662D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE02FD1C24F76EEA005A662D /* Main.storyboard */; };
+		EE02FD2724F76F7B005A662D /* CubemapRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE02FD2624F76F7B005A662D /* CubemapRenderer.swift */; };
+		EE36D84D2558A24B00CA1B8F /* Mesh.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE3CD3F025330F650033B5BB /* Mesh.swift */; };
+		EE36D84F2558A29B00CA1B8F /* BoxMesh.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE3CD3EF25330F650033B5BB /* BoxMesh.swift */; };
+		EE482ED22826A5500041C469 /* CubeMeshRH.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE482ED12826A54F0041C469 /* CubeMeshRH.swift */; };
+		EE544D692533396000B00C7E /* AAPLMathUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = EE544D682533396000B00C7E /* AAPLMathUtilities.m */; };
+		EE57A27228273BBD0013509F /* MTKTextureLoader+HDR.m in Sources */ = {isa = PBXBuildFile; fileRef = EE4FA43E2807CF3E006236F8 /* MTKTextureLoader+HDR.m */; };
+		EE61B7F924F7B298009338D9 /* Shaders.metal in Sources */ = {isa = PBXBuildFile; fileRef = EE61B7F824F7B298009338D9 /* Shaders.metal */; };
+		EE7454BA282C7E97005B99F0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE7454B9282C7E97005B99F0 /* AppDelegate.swift */; };
+		EE7454BC282C7E97005B99F0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE7454BB282C7E97005B99F0 /* ViewController.swift */; };
+		EE7454BE282C7E9A005B99F0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EE7454BD282C7E9A005B99F0 /* Assets.xcassets */; };
+		EE7454C1282C7E9A005B99F0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE7454BF282C7E9A005B99F0 /* Main.storyboard */; };
+		EE7454CA282C7F4E005B99F0 /* CubemapRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE7454C7282C7F4E005B99F0 /* CubemapRenderer.swift */; };
+		EE7454CB282C7F4E005B99F0 /* Shaders.metal in Sources */ = {isa = PBXBuildFile; fileRef = EE7454C9282C7F4E005B99F0 /* Shaders.metal */; };
+		EE7454CC282C7F8C005B99F0 /* AAPLMathUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = EE544D682533396000B00C7E /* AAPLMathUtilities.m */; };
+		EE7454CD282C7F93005B99F0 /* MTKTextureLoader+HDR.m in Sources */ = {isa = PBXBuildFile; fileRef = EE4FA43E2807CF3E006236F8 /* MTKTextureLoader+HDR.m */; };
+		EE7454CE282C7FAD005B99F0 /* CubeMeshRH.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE482ED12826A54F0041C469 /* CubeMeshRH.swift */; };
+		EE7454CF282C7FB0005B99F0 /* BoxMesh.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE3CD3EF25330F650033B5BB /* BoxMesh.swift */; };
+		EE7454D0282C7FB5005B99F0 /* Mesh.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE3CD3F025330F650033B5BB /* Mesh.swift */; };
+		EE8A4259282B63E700A831A9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE8A4258282B63E700A831A9 /* AppDelegate.swift */; };
+		EE8A425B282B63E700A831A9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE8A425A282B63E700A831A9 /* ViewController.swift */; };
+		EE8A425D282B63EA00A831A9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EE8A425C282B63EA00A831A9 /* Assets.xcassets */; };
+		EE8A4260282B63EA00A831A9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE8A425E282B63EA00A831A9 /* Main.storyboard */; };
+		EE8A4269282B649B00A831A9 /* Shaders.metal in Sources */ = {isa = PBXBuildFile; fileRef = EE8A4267282B649B00A831A9 /* Shaders.metal */; };
+		EE8A426A282B649B00A831A9 /* CubemapRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE8A4268282B649B00A831A9 /* CubemapRenderer.swift */; };
+		EE8A426B282B64D900A831A9 /* CubeMeshRH.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE482ED12826A54F0041C469 /* CubeMeshRH.swift */; };
+		EE8A426C282B64DC00A831A9 /* Mesh.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE3CD3F025330F650033B5BB /* Mesh.swift */; };
+		EE8A426D282B64E700A831A9 /* MTKTextureLoader+HDR.m in Sources */ = {isa = PBXBuildFile; fileRef = EE4FA43E2807CF3E006236F8 /* MTKTextureLoader+HDR.m */; };
+		EE8A426E282B64ED00A831A9 /* AAPLMathUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = EE544D682533396000B00C7E /* AAPLMathUtilities.m */; };
+		EE8A426F282B650500A831A9 /* BoxMesh.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE3CD3EF25330F650033B5BB /* BoxMesh.swift */; };
+		EE8A4270282B65F900A831A9 /* nx.png in Resources */ = {isa = PBXBuildFile; fileRef = EEBEE57E2827A8D9002FB85D /* nx.png */; };
+		EE8A4271282B65F900A831A9 /* ny.png in Resources */ = {isa = PBXBuildFile; fileRef = EEBEE5802827A8D9002FB85D /* ny.png */; };
+		EE8A4272282B65F900A831A9 /* nz.png in Resources */ = {isa = PBXBuildFile; fileRef = EEBEE57B2827A8D9002FB85D /* nz.png */; };
+		EE8A4273282B65F900A831A9 /* px.png in Resources */ = {isa = PBXBuildFile; fileRef = EEBEE57C2827A8D9002FB85D /* px.png */; };
+		EE8A4274282B65F900A831A9 /* py.png in Resources */ = {isa = PBXBuildFile; fileRef = EEBEE57D2827A8D9002FB85D /* py.png */; };
+		EE8A4275282B65F900A831A9 /* pz.png in Resources */ = {isa = PBXBuildFile; fileRef = EEBEE57F2827A8D9002FB85D /* pz.png */; };
+		EE8A4276282B660300A831A9 /* nx.hdr in Resources */ = {isa = PBXBuildFile; fileRef = EEAFE6C127F06079008E1CCF /* nx.hdr */; };
+		EE8A4277282B660300A831A9 /* ny.hdr in Resources */ = {isa = PBXBuildFile; fileRef = EEAFE6BF27F06079008E1CCF /* ny.hdr */; };
+		EE8A4278282B660300A831A9 /* nz.hdr in Resources */ = {isa = PBXBuildFile; fileRef = EEAFE6C027F06079008E1CCF /* nz.hdr */; };
+		EE8A4279282B660300A831A9 /* px.hdr in Resources */ = {isa = PBXBuildFile; fileRef = EEAFE6C327F06079008E1CCF /* px.hdr */; };
+		EE8A427A282B660300A831A9 /* py.hdr in Resources */ = {isa = PBXBuildFile; fileRef = EEAFE6C427F06079008E1CCF /* py.hdr */; };
+		EE8A427B282B660300A831A9 /* pz.hdr in Resources */ = {isa = PBXBuildFile; fileRef = EEAFE6C227F06079008E1CCF /* pz.hdr */; };
+		EEAFE6C527F06079008E1CCF /* ny.hdr in Resources */ = {isa = PBXBuildFile; fileRef = EEAFE6BF27F06079008E1CCF /* ny.hdr */; };
+		EEAFE6C627F06079008E1CCF /* nz.hdr in Resources */ = {isa = PBXBuildFile; fileRef = EEAFE6C027F06079008E1CCF /* nz.hdr */; };
+		EEAFE6C727F06079008E1CCF /* nx.hdr in Resources */ = {isa = PBXBuildFile; fileRef = EEAFE6C127F06079008E1CCF /* nx.hdr */; };
+		EEAFE6C827F06079008E1CCF /* pz.hdr in Resources */ = {isa = PBXBuildFile; fileRef = EEAFE6C227F06079008E1CCF /* pz.hdr */; };
+		EEAFE6C927F06079008E1CCF /* px.hdr in Resources */ = {isa = PBXBuildFile; fileRef = EEAFE6C327F06079008E1CCF /* px.hdr */; };
+		EEAFE6CA27F06079008E1CCF /* py.hdr in Resources */ = {isa = PBXBuildFile; fileRef = EEAFE6C427F06079008E1CCF /* py.hdr */; };
+		EEBEE5812827A8D9002FB85D /* nz.png in Resources */ = {isa = PBXBuildFile; fileRef = EEBEE57B2827A8D9002FB85D /* nz.png */; };
+		EEBEE5822827A8D9002FB85D /* px.png in Resources */ = {isa = PBXBuildFile; fileRef = EEBEE57C2827A8D9002FB85D /* px.png */; };
+		EEBEE5832827A8D9002FB85D /* py.png in Resources */ = {isa = PBXBuildFile; fileRef = EEBEE57D2827A8D9002FB85D /* py.png */; };
+		EEBEE5842827A8D9002FB85D /* nx.png in Resources */ = {isa = PBXBuildFile; fileRef = EEBEE57E2827A8D9002FB85D /* nx.png */; };
+		EEBEE5852827A8D9002FB85D /* pz.png in Resources */ = {isa = PBXBuildFile; fileRef = EEBEE57F2827A8D9002FB85D /* pz.png */; };
+		EEBEE5862827A8D9002FB85D /* ny.png in Resources */ = {isa = PBXBuildFile; fileRef = EEBEE5802827A8D9002FB85D /* ny.png */; };
+		EED8F63B2830E00800E6C12C /* OpenGLRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = EED8F6382830E00800E6C12C /* OpenGLRenderer.swift */; };
+		EED8F63C2830E00800E6C12C /* OpenGLRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = EED8F6382830E00800E6C12C /* OpenGLRenderer.swift */; };
+		EED8F63D2830E00800E6C12C /* OpenGLViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EED8F6392830E00800E6C12C /* OpenGLViewController.swift */; };
+		EED8F63E2830E00800E6C12C /* OpenGLViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EED8F6392830E00800E6C12C /* OpenGLViewController.swift */; };
+		EED8F6412830E04000E6C12C /* LoadHDR.m in Sources */ = {isa = PBXBuildFile; fileRef = EED8F6402830E04000E6C12C /* LoadHDR.m */; };
+		EED8F6422830E04000E6C12C /* LoadHDR.m in Sources */ = {isa = PBXBuildFile; fileRef = EED8F6402830E04000E6C12C /* LoadHDR.m */; };
+		EED8F64A2830E0C300E6C12C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EED8F6432830E0C300E6C12C /* Main.storyboard */; };
+		EED8F64B2830E0C300E6C12C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EED8F6452830E0C300E6C12C /* Assets.xcassets */; };
+		EED8F64C2830E0C300E6C12C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EED8F6462830E0C300E6C12C /* AppDelegate.swift */; };
+		EED8F64E2830E0C300E6C12C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EED8F6482830E0C300E6C12C /* LaunchScreen.storyboard */; };
+		EED8F6552830E0DA00E6C12C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EED8F6502830E0DA00E6C12C /* Assets.xcassets */; };
+		EED8F6572830E0DA00E6C12C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EED8F6522830E0DA00E6C12C /* AppDelegate.swift */; };
+		EED8F6582830E0DA00E6C12C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EED8F6532830E0DA00E6C12C /* Main.storyboard */; };
+		EED8F6592830E10500E6C12C /* AAPLMathUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = EE544D682533396000B00C7E /* AAPLMathUtilities.m */; };
+		EED8F65A2830E10E00E6C12C /* AAPLMathUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = EE544D682533396000B00C7E /* AAPLMathUtilities.m */; };
+		EED8F65D2830E47100E6C12C /* FragmentShader.glsl in Resources */ = {isa = PBXBuildFile; fileRef = EED8F65B2830E47100E6C12C /* FragmentShader.glsl */; };
+		EED8F65E2830E47100E6C12C /* FragmentShader.glsl in Resources */ = {isa = PBXBuildFile; fileRef = EED8F65B2830E47100E6C12C /* FragmentShader.glsl */; };
+		EED8F65F2830E47100E6C12C /* VertexShader.glsl in Resources */ = {isa = PBXBuildFile; fileRef = EED8F65C2830E47100E6C12C /* VertexShader.glsl */; };
+		EED8F6602830E47100E6C12C /* VertexShader.glsl in Resources */ = {isa = PBXBuildFile; fileRef = EED8F65C2830E47100E6C12C /* VertexShader.glsl */; };
+		EED8F6612830E56F00E6C12C /* nx.hdr in Resources */ = {isa = PBXBuildFile; fileRef = EEAFE6C127F06079008E1CCF /* nx.hdr */; };
+		EED8F6622830E58100E6C12C /* ny.hdr in Resources */ = {isa = PBXBuildFile; fileRef = EEAFE6BF27F06079008E1CCF /* ny.hdr */; };
+		EED8F6632830E58100E6C12C /* nz.hdr in Resources */ = {isa = PBXBuildFile; fileRef = EEAFE6C027F06079008E1CCF /* nz.hdr */; };
+		EED8F6642830E58100E6C12C /* px.hdr in Resources */ = {isa = PBXBuildFile; fileRef = EEAFE6C327F06079008E1CCF /* px.hdr */; };
+		EED8F6652830E58100E6C12C /* py.hdr in Resources */ = {isa = PBXBuildFile; fileRef = EEAFE6C427F06079008E1CCF /* py.hdr */; };
+		EED8F6662830E58100E6C12C /* pz.hdr in Resources */ = {isa = PBXBuildFile; fileRef = EEAFE6C227F06079008E1CCF /* pz.hdr */; };
+		EED8F6672830E5CF00E6C12C /* nx.hdr in Resources */ = {isa = PBXBuildFile; fileRef = EEAFE6C127F06079008E1CCF /* nx.hdr */; };
+		EED8F6682830E5CF00E6C12C /* ny.hdr in Resources */ = {isa = PBXBuildFile; fileRef = EEAFE6BF27F06079008E1CCF /* ny.hdr */; };
+		EED8F6692830E5CF00E6C12C /* nz.hdr in Resources */ = {isa = PBXBuildFile; fileRef = EEAFE6C027F06079008E1CCF /* nz.hdr */; };
+		EED8F66A2830E5CF00E6C12C /* px.hdr in Resources */ = {isa = PBXBuildFile; fileRef = EEAFE6C327F06079008E1CCF /* px.hdr */; };
+		EED8F66B2830E5CF00E6C12C /* py.hdr in Resources */ = {isa = PBXBuildFile; fileRef = EEAFE6C427F06079008E1CCF /* py.hdr */; };
+		EED8F66C2830E5CF00E6C12C /* pz.hdr in Resources */ = {isa = PBXBuildFile; fileRef = EEAFE6C227F06079008E1CCF /* pz.hdr */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		EE02FD1324F76EE9005A662D /* Crossmap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Crossmap.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EE02FD1624F76EE9005A662D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; wrapsLines = 0; };
+		EE02FD1824F76EE9005A662D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; wrapsLines = 0; };
+		EE02FD1A24F76EEA005A662D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		EE02FD1D24F76EEA005A662D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		EE02FD1F24F76EEA005A662D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EE02FD2024F76EEA005A662D /* Crossmap.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Crossmap.entitlements; sourceTree = "<group>"; };
+		EE02FD2624F76F7B005A662D /* CubemapRenderer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CubemapRenderer.swift; sourceTree = "<group>"; wrapsLines = 0; };
+		EE0C3A0D254B923900E5BB96 /* newport_loft.hdr */ = {isa = PBXFileReference; lastKnownFileType = file; path = newport_loft.hdr; sourceTree = "<group>"; };
+		EE3CD3EF25330F650033B5BB /* BoxMesh.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoxMesh.swift; sourceTree = "<group>"; wrapsLines = 0; };
+		EE3CD3F025330F650033B5BB /* Mesh.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Mesh.swift; sourceTree = "<group>"; wrapsLines = 0; };
+		EE3CD3F125330F650033B5BB /* TorusMesh.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TorusMesh.swift; sourceTree = "<group>"; wrapsLines = 0; };
+		EE482ED02826A4CF0041C469 /* stb_image.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = stb_image.h; sourceTree = "<group>"; };
+		EE482ED12826A54F0041C469 /* CubeMeshRH.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CubeMeshRH.swift; sourceTree = "<group>"; };
+		EE49909C282942AD0038597C /* EquiRectImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = EquiRectImage.png; sourceTree = "<group>"; };
+		EE4B6AD728079196002E4E56 /* Readme.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = Readme.md; sourceTree = "<group>"; wrapsLines = 1; };
+		EE4FA43E2807CF3E006236F8 /* MTKTextureLoader+HDR.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MTKTextureLoader+HDR.m"; sourceTree = "<group>"; };
+		EE4FA4402807D5F7006236F8 /* MTKTextureLoader+HDR.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MTKTextureLoader+HDR.h"; sourceTree = "<group>"; };
+		EE544D672533396000B00C7E /* AAPLMathUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AAPLMathUtilities.h; sourceTree = "<group>"; wrapsLines = 0; };
+		EE544D682533396000B00C7E /* AAPLMathUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AAPLMathUtilities.m; sourceTree = "<group>"; wrapsLines = 0; };
+		EE61B7F424F7B0FA009338D9 /* Crossmap-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Crossmap-Bridging-Header.h"; sourceTree = "<group>"; wrapsLines = 0; };
+		EE61B7F824F7B298009338D9 /* Shaders.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = Shaders.metal; sourceTree = "<group>"; wrapsLines = 0; };
+		EE7454B7282C7E97005B99F0 /* Crossmap3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Crossmap3.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EE7454B9282C7E97005B99F0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; wrapsLines = 0; };
+		EE7454BB282C7E97005B99F0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; wrapsLines = 0; };
+		EE7454BD282C7E9A005B99F0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		EE7454C0282C7E9A005B99F0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		EE7454C2282C7E9A005B99F0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EE7454C3282C7E9A005B99F0 /* Crossmap3.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Crossmap3.entitlements; sourceTree = "<group>"; };
+		EE7454C7282C7F4E005B99F0 /* CubemapRenderer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CubemapRenderer.swift; sourceTree = "<group>"; wrapsLines = 0; };
+		EE7454C8282C7F4E005B99F0 /* Crossmap3-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Crossmap3-Bridging-Header.h"; sourceTree = "<group>"; wrapsLines = 0; };
+		EE7454C9282C7F4E005B99F0 /* Shaders.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = Shaders.metal; sourceTree = "<group>"; wrapsLines = 0; };
+		EE8A4256282B63E700A831A9 /* Crossmap2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Crossmap2.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EE8A4258282B63E700A831A9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; wrapsLines = 0; };
+		EE8A425A282B63E700A831A9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; wrapsLines = 0; };
+		EE8A425C282B63EA00A831A9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		EE8A425F282B63EA00A831A9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		EE8A4261282B63EA00A831A9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EE8A4262282B63EA00A831A9 /* Crossmap2.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Crossmap2.entitlements; sourceTree = "<group>"; };
+		EE8A4267282B649B00A831A9 /* Shaders.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = Shaders.metal; sourceTree = "<group>"; wrapsLines = 0; };
+		EE8A4268282B649B00A831A9 /* CubemapRenderer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CubemapRenderer.swift; sourceTree = "<group>"; wrapsLines = 0; };
+		EE8A427C282B68F900A831A9 /* Crossmap2-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Crossmap2-Bridging-Header.h"; sourceTree = "<group>"; wrapsLines = 0; };
+		EEA5B4A127EEFB0E00100E9A /* EquiRectImage.hdr */ = {isa = PBXFileReference; lastKnownFileType = file; path = EquiRectImage.hdr; sourceTree = "<group>"; };
+		EEAFE6BF27F06079008E1CCF /* ny.hdr */ = {isa = PBXFileReference; lastKnownFileType = file; path = ny.hdr; sourceTree = "<group>"; };
+		EEAFE6C027F06079008E1CCF /* nz.hdr */ = {isa = PBXFileReference; lastKnownFileType = file; path = nz.hdr; sourceTree = "<group>"; };
+		EEAFE6C127F06079008E1CCF /* nx.hdr */ = {isa = PBXFileReference; lastKnownFileType = file; path = nx.hdr; sourceTree = "<group>"; };
+		EEAFE6C227F06079008E1CCF /* pz.hdr */ = {isa = PBXFileReference; lastKnownFileType = file; path = pz.hdr; sourceTree = "<group>"; };
+		EEAFE6C327F06079008E1CCF /* px.hdr */ = {isa = PBXFileReference; lastKnownFileType = file; path = px.hdr; sourceTree = "<group>"; };
+		EEAFE6C427F06079008E1CCF /* py.hdr */ = {isa = PBXFileReference; lastKnownFileType = file; path = py.hdr; sourceTree = "<group>"; };
+		EEBEE57B2827A8D9002FB85D /* nz.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = nz.png; sourceTree = "<group>"; };
+		EEBEE57C2827A8D9002FB85D /* px.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = px.png; sourceTree = "<group>"; };
+		EEBEE57D2827A8D9002FB85D /* py.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = py.png; sourceTree = "<group>"; };
+		EEBEE57E2827A8D9002FB85D /* nx.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = nx.png; sourceTree = "<group>"; };
+		EEBEE57F2827A8D9002FB85D /* pz.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pz.png; sourceTree = "<group>"; };
+		EEBEE5802827A8D9002FB85D /* ny.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ny.png; sourceTree = "<group>"; };
+		EED8F60E2830DE0300E6C12C /* Crossmap-macOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Crossmap-macOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EED8F6262830DECA00E6C12C /* Crossmap-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Crossmap-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EED8F6382830E00800E6C12C /* OpenGLRenderer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OpenGLRenderer.swift; sourceTree = "<group>"; wrapsLines = 0; };
+		EED8F6392830E00800E6C12C /* OpenGLViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OpenGLViewController.swift; sourceTree = "<group>"; wrapsLines = 0; };
+		EED8F63A2830E00800E6C12C /* Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
+		EED8F63F2830E04000E6C12C /* LoadHDR.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoadHDR.h; sourceTree = "<group>"; wrapsLines = 0; };
+		EED8F6402830E04000E6C12C /* LoadHDR.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoadHDR.m; sourceTree = "<group>"; wrapsLines = 0; };
+		EED8F6442830E0C300E6C12C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		EED8F6452830E0C300E6C12C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		EED8F6462830E0C300E6C12C /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; wrapsLines = 0; };
+		EED8F6472830E0C300E6C12C /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EED8F6492830E0C300E6C12C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		EED8F64F2830E0DA00E6C12C /* Crossmap-macOS.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.entitlements; path = "Crossmap-macOS.entitlements"; sourceTree = "<group>"; };
+		EED8F6502830E0DA00E6C12C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		EED8F6512830E0DA00E6C12C /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EED8F6522830E0DA00E6C12C /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		EED8F6542830E0DA00E6C12C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		EED8F65B2830E47100E6C12C /* FragmentShader.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = FragmentShader.glsl; sourceTree = "<group>"; wrapsLines = 0; };
+		EED8F65C2830E47100E6C12C /* VertexShader.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = VertexShader.glsl; sourceTree = "<group>"; wrapsLines = 0; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EE02FD1024F76EE9005A662D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EE7454B4282C7E97005B99F0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EE8A4253282B63E700A831A9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EED8F60B2830DE0300E6C12C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EED8F6232830DECA00E6C12C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		EE02FD0A24F76EE9005A662D = {
+			isa = PBXGroup;
+			children = (
+				EE4B6AD728079196002E4E56 /* Readme.md */,
+				EE0C3A0B254B91D600E5BB96 /* Images */,
+				EE544D652533393E00B00C7E /* Common */,
+				EE02FD1524F76EE9005A662D /* Crossmap */,
+				EE8A4257282B63E700A831A9 /* Crossmap2 */,
+				EE7454B8282C7E97005B99F0 /* Crossmap3 */,
+				EED8F5FB2830D8A000E6C12C /* OGL-Crossmaps */,
+				EE02FD1424F76EE9005A662D /* Products */,
+				EE5EE175251C4D2500C24531 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+			wrapsLines = 1;
+		};
+		EE02FD1424F76EE9005A662D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EE02FD1324F76EE9005A662D /* Crossmap.app */,
+				EE8A4256282B63E700A831A9 /* Crossmap2.app */,
+				EE7454B7282C7E97005B99F0 /* Crossmap3.app */,
+				EED8F60E2830DE0300E6C12C /* Crossmap-macOS.app */,
+				EED8F6262830DECA00E6C12C /* Crossmap-iOS.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EE02FD1524F76EE9005A662D /* Crossmap */ = {
+			isa = PBXGroup;
+			children = (
+				EE02FD1624F76EE9005A662D /* AppDelegate.swift */,
+				EE02FD2624F76F7B005A662D /* CubemapRenderer.swift */,
+				EE02FD1824F76EE9005A662D /* ViewController.swift */,
+				EE61B7F824F7B298009338D9 /* Shaders.metal */,
+				EE02FD1A24F76EEA005A662D /* Assets.xcassets */,
+				EE02FD1C24F76EEA005A662D /* Main.storyboard */,
+				EE02FD1F24F76EEA005A662D /* Info.plist */,
+				EE02FD2024F76EEA005A662D /* Crossmap.entitlements */,
+				EE61B7F424F7B0FA009338D9 /* Crossmap-Bridging-Header.h */,
+			);
+			path = Crossmap;
+			sourceTree = "<group>";
+			wrapsLines = 0;
+		};
+		EE0C3A0B254B91D600E5BB96 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				EEBEE57A2827A8A1002FB85D /* PNG */,
+				EEBEE5792827A899002FB85D /* HDR */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
+		EE544D652533393E00B00C7E /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				EE544D672533396000B00C7E /* AAPLMathUtilities.h */,
+				EE544D682533396000B00C7E /* AAPLMathUtilities.m */,
+				EE3CD3EF25330F650033B5BB /* BoxMesh.swift */,
+				EE482ED12826A54F0041C469 /* CubeMeshRH.swift */,
+				EE3CD3F025330F650033B5BB /* Mesh.swift */,
+				EE3CD3F125330F650033B5BB /* TorusMesh.swift */,
+				EE482ED02826A4CF0041C469 /* stb_image.h */,
+				EE4FA4402807D5F7006236F8 /* MTKTextureLoader+HDR.h */,
+				EE4FA43E2807CF3E006236F8 /* MTKTextureLoader+HDR.m */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+			wrapsLines = 0;
+		};
+		EE5EE175251C4D2500C24531 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EE7454B8282C7E97005B99F0 /* Crossmap3 */ = {
+			isa = PBXGroup;
+			children = (
+				EE7454B9282C7E97005B99F0 /* AppDelegate.swift */,
+				EE7454C7282C7F4E005B99F0 /* CubemapRenderer.swift */,
+				EE7454BB282C7E97005B99F0 /* ViewController.swift */,
+				EE7454C9282C7F4E005B99F0 /* Shaders.metal */,
+				EE7454BD282C7E9A005B99F0 /* Assets.xcassets */,
+				EE7454BF282C7E9A005B99F0 /* Main.storyboard */,
+				EE7454C8282C7F4E005B99F0 /* Crossmap3-Bridging-Header.h */,
+				EE7454C2282C7E9A005B99F0 /* Info.plist */,
+				EE7454C3282C7E9A005B99F0 /* Crossmap3.entitlements */,
+			);
+			path = Crossmap3;
+			sourceTree = "<group>";
+		};
+		EE8A4257282B63E700A831A9 /* Crossmap2 */ = {
+			isa = PBXGroup;
+			children = (
+				EE8A4258282B63E700A831A9 /* AppDelegate.swift */,
+				EE8A4268282B649B00A831A9 /* CubemapRenderer.swift */,
+				EE8A4267282B649B00A831A9 /* Shaders.metal */,
+				EE8A425A282B63E700A831A9 /* ViewController.swift */,
+				EE8A427C282B68F900A831A9 /* Crossmap2-Bridging-Header.h */,
+				EE8A425C282B63EA00A831A9 /* Assets.xcassets */,
+				EE8A425E282B63EA00A831A9 /* Main.storyboard */,
+				EE8A4261282B63EA00A831A9 /* Info.plist */,
+				EE8A4262282B63EA00A831A9 /* Crossmap2.entitlements */,
+			);
+			path = Crossmap2;
+			sourceTree = "<group>";
+		};
+		EEBEE5792827A899002FB85D /* HDR */ = {
+			isa = PBXGroup;
+			children = (
+				EEAFE6C127F06079008E1CCF /* nx.hdr */,
+				EEAFE6BF27F06079008E1CCF /* ny.hdr */,
+				EEAFE6C027F06079008E1CCF /* nz.hdr */,
+				EEAFE6C327F06079008E1CCF /* px.hdr */,
+				EEAFE6C427F06079008E1CCF /* py.hdr */,
+				EEAFE6C227F06079008E1CCF /* pz.hdr */,
+				EEA5B4A127EEFB0E00100E9A /* EquiRectImage.hdr */,
+				EE0C3A0D254B923900E5BB96 /* newport_loft.hdr */,
+			);
+			path = HDR;
+			sourceTree = "<group>";
+		};
+		EEBEE57A2827A8A1002FB85D /* PNG */ = {
+			isa = PBXGroup;
+			children = (
+				EE49909C282942AD0038597C /* EquiRectImage.png */,
+				EEBEE57E2827A8D9002FB85D /* nx.png */,
+				EEBEE5802827A8D9002FB85D /* ny.png */,
+				EEBEE57B2827A8D9002FB85D /* nz.png */,
+				EEBEE57C2827A8D9002FB85D /* px.png */,
+				EEBEE57D2827A8D9002FB85D /* py.png */,
+				EEBEE57F2827A8D9002FB85D /* pz.png */,
+			);
+			path = PNG;
+			sourceTree = "<group>";
+		};
+		EED8F5FB2830D8A000E6C12C /* OGL-Crossmaps */ = {
+			isa = PBXGroup;
+			children = (
+				EED8F61E2830DE1D00E6C12C /* Application */,
+			);
+			path = "OGL-Crossmaps";
+			sourceTree = "<group>";
+		};
+		EED8F61E2830DE1D00E6C12C /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				EED8F63A2830E00800E6C12C /* Bridging-Header.h */,
+				EED8F63F2830E04000E6C12C /* LoadHDR.h */,
+				EED8F6402830E04000E6C12C /* LoadHDR.m */,
+				EED8F6382830E00800E6C12C /* OpenGLRenderer.swift */,
+				EED8F6392830E00800E6C12C /* OpenGLViewController.swift */,
+				EED8F6202830DE9F00E6C12C /* iOS */,
+				EED8F6212830DEA800E6C12C /* macOS */,
+				EED8F61F2830DE5600E6C12C /* Shaders */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		EED8F61F2830DE5600E6C12C /* Shaders */ = {
+			isa = PBXGroup;
+			children = (
+				EED8F65B2830E47100E6C12C /* FragmentShader.glsl */,
+				EED8F65C2830E47100E6C12C /* VertexShader.glsl */,
+			);
+			path = Shaders;
+			sourceTree = "<group>";
+		};
+		EED8F6202830DE9F00E6C12C /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				EED8F6462830E0C300E6C12C /* AppDelegate.swift */,
+				EED8F6452830E0C300E6C12C /* Assets.xcassets */,
+				EED8F6472830E0C300E6C12C /* Info.plist */,
+				EED8F6482830E0C300E6C12C /* LaunchScreen.storyboard */,
+				EED8F6432830E0C300E6C12C /* Main.storyboard */,
+			);
+			path = iOS;
+			sourceTree = "<group>";
+		};
+		EED8F6212830DEA800E6C12C /* macOS */ = {
+			isa = PBXGroup;
+			children = (
+				EED8F6522830E0DA00E6C12C /* AppDelegate.swift */,
+				EED8F6502830E0DA00E6C12C /* Assets.xcassets */,
+				EED8F64F2830E0DA00E6C12C /* Crossmap-macOS.entitlements */,
+				EED8F6512830E0DA00E6C12C /* Info.plist */,
+				EED8F6532830E0DA00E6C12C /* Main.storyboard */,
+			);
+			path = macOS;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EE02FD1224F76EE9005A662D /* Crossmap */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EE02FD2324F76EEA005A662D /* Build configuration list for PBXNativeTarget "Crossmap" */;
+			buildPhases = (
+				EE02FD0F24F76EE9005A662D /* Sources */,
+				EE02FD1024F76EE9005A662D /* Frameworks */,
+				EE02FD1124F76EE9005A662D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Crossmap;
+			productName = MetalCubemapping;
+			productReference = EE02FD1324F76EE9005A662D /* Crossmap.app */;
+			productType = "com.apple.product-type.application";
+		};
+		EE7454B6282C7E97005B99F0 /* Crossmap3 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EE7454C6282C7E9A005B99F0 /* Build configuration list for PBXNativeTarget "Crossmap3" */;
+			buildPhases = (
+				EE7454B3282C7E97005B99F0 /* Sources */,
+				EE7454B4282C7E97005B99F0 /* Frameworks */,
+				EE7454B5282C7E97005B99F0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Crossmap3;
+			productName = Crossmap3;
+			productReference = EE7454B7282C7E97005B99F0 /* Crossmap3.app */;
+			productType = "com.apple.product-type.application";
+		};
+		EE8A4255282B63E700A831A9 /* Crossmap2 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EE8A4265282B63EA00A831A9 /* Build configuration list for PBXNativeTarget "Crossmap2" */;
+			buildPhases = (
+				EE8A4252282B63E700A831A9 /* Sources */,
+				EE8A4253282B63E700A831A9 /* Frameworks */,
+				EE8A4254282B63E700A831A9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Crossmap2;
+			productName = Crossmap2;
+			productReference = EE8A4256282B63E700A831A9 /* Crossmap2.app */;
+			productType = "com.apple.product-type.application";
+		};
+		EED8F60D2830DE0300E6C12C /* Crossmap-macOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EED8F61B2830DE0700E6C12C /* Build configuration list for PBXNativeTarget "Crossmap-macOS" */;
+			buildPhases = (
+				EED8F60A2830DE0300E6C12C /* Sources */,
+				EED8F60B2830DE0300E6C12C /* Frameworks */,
+				EED8F60C2830DE0300E6C12C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Crossmap-macOS";
+			productName = "Crossmap-macOS";
+			productReference = EED8F60E2830DE0300E6C12C /* Crossmap-macOS.app */;
+			productType = "com.apple.product-type.application";
+		};
+		EED8F6252830DECA00E6C12C /* Crossmap-iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EED8F6352830DECC00E6C12C /* Build configuration list for PBXNativeTarget "Crossmap-iOS" */;
+			buildPhases = (
+				EED8F6222830DECA00E6C12C /* Sources */,
+				EED8F6232830DECA00E6C12C /* Frameworks */,
+				EED8F6242830DECA00E6C12C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Crossmap-iOS";
+			productName = "Crossmap-iOS";
+			productReference = EED8F6262830DECA00E6C12C /* Crossmap-iOS.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EE02FD0B24F76EE9005A662D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0940;
+				LastUpgradeCheck = 0940;
+				ORGANIZATIONNAME = "Mark Lim Pak Mun";
+				TargetAttributes = {
+					EE02FD1224F76EE9005A662D = {
+						CreatedOnToolsVersion = 9.4.1;
+						LastSwiftMigration = 1010;
+						ProvisioningStyle = Automatic;
+					};
+					EE7454B6282C7E97005B99F0 = {
+						CreatedOnToolsVersion = 11.6;
+						ProvisioningStyle = Automatic;
+					};
+					EE8A4255282B63E700A831A9 = {
+						CreatedOnToolsVersion = 11.6;
+						ProvisioningStyle = Automatic;
+					};
+					EED8F60D2830DE0300E6C12C = {
+						CreatedOnToolsVersion = 9.4.1;
+						LastSwiftMigration = 0940;
+						ProvisioningStyle = Automatic;
+					};
+					EED8F6252830DECA00E6C12C = {
+						CreatedOnToolsVersion = 9.4.1;
+						LastSwiftMigration = 0940;
+						ProvisioningStyle = Manual;
+					};
+				};
+			};
+			buildConfigurationList = EE02FD0E24F76EE9005A662D /* Build configuration list for PBXProject "Crossmaps" */;
+			compatibilityVersion = "Xcode 6.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = EE02FD0A24F76EE9005A662D;
+			productRefGroup = EE02FD1424F76EE9005A662D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EE02FD1224F76EE9005A662D /* Crossmap */,
+				EE8A4255282B63E700A831A9 /* Crossmap2 */,
+				EE7454B6282C7E97005B99F0 /* Crossmap3 */,
+				EED8F60D2830DE0300E6C12C /* Crossmap-macOS */,
+				EED8F6252830DECA00E6C12C /* Crossmap-iOS */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EE02FD1124F76EE9005A662D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EEBEE5842827A8D9002FB85D /* nx.png in Resources */,
+				EEBEE5862827A8D9002FB85D /* ny.png in Resources */,
+				EEBEE5812827A8D9002FB85D /* nz.png in Resources */,
+				EEBEE5822827A8D9002FB85D /* px.png in Resources */,
+				EEBEE5832827A8D9002FB85D /* py.png in Resources */,
+				EEBEE5852827A8D9002FB85D /* pz.png in Resources */,
+				EEAFE6C727F06079008E1CCF /* nx.hdr in Resources */,
+				EEAFE6C527F06079008E1CCF /* ny.hdr in Resources */,
+				EEAFE6C627F06079008E1CCF /* nz.hdr in Resources */,
+				EEAFE6C827F06079008E1CCF /* pz.hdr in Resources */,
+				EEAFE6C927F06079008E1CCF /* px.hdr in Resources */,
+				EEAFE6CA27F06079008E1CCF /* py.hdr in Resources */,
+				EE02FD1B24F76EEA005A662D /* Assets.xcassets in Resources */,
+				EE02FD1E24F76EEA005A662D /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EE7454B5282C7E97005B99F0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EE7454BE282C7E9A005B99F0 /* Assets.xcassets in Resources */,
+				EE7454C1282C7E9A005B99F0 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EE8A4254282B63E700A831A9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EE8A4276282B660300A831A9 /* nx.hdr in Resources */,
+				EE8A4277282B660300A831A9 /* ny.hdr in Resources */,
+				EE8A4278282B660300A831A9 /* nz.hdr in Resources */,
+				EE8A4279282B660300A831A9 /* px.hdr in Resources */,
+				EE8A427A282B660300A831A9 /* py.hdr in Resources */,
+				EE8A427B282B660300A831A9 /* pz.hdr in Resources */,
+				EE8A4270282B65F900A831A9 /* nx.png in Resources */,
+				EE8A4271282B65F900A831A9 /* ny.png in Resources */,
+				EE8A4272282B65F900A831A9 /* nz.png in Resources */,
+				EE8A4273282B65F900A831A9 /* px.png in Resources */,
+				EE8A4274282B65F900A831A9 /* py.png in Resources */,
+				EE8A4275282B65F900A831A9 /* pz.png in Resources */,
+				EE8A425D282B63EA00A831A9 /* Assets.xcassets in Resources */,
+				EE8A4260282B63EA00A831A9 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EED8F60C2830DE0300E6C12C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EED8F6612830E56F00E6C12C /* nx.hdr in Resources */,
+				EED8F6622830E58100E6C12C /* ny.hdr in Resources */,
+				EED8F6632830E58100E6C12C /* nz.hdr in Resources */,
+				EED8F6642830E58100E6C12C /* px.hdr in Resources */,
+				EED8F6652830E58100E6C12C /* py.hdr in Resources */,
+				EED8F6662830E58100E6C12C /* pz.hdr in Resources */,
+				EED8F6582830E0DA00E6C12C /* Main.storyboard in Resources */,
+				EED8F65D2830E47100E6C12C /* FragmentShader.glsl in Resources */,
+				EED8F65F2830E47100E6C12C /* VertexShader.glsl in Resources */,
+				EED8F6552830E0DA00E6C12C /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EED8F6242830DECA00E6C12C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EED8F64B2830E0C300E6C12C /* Assets.xcassets in Resources */,
+				EED8F64E2830E0C300E6C12C /* LaunchScreen.storyboard in Resources */,
+				EED8F6602830E47100E6C12C /* VertexShader.glsl in Resources */,
+				EED8F65E2830E47100E6C12C /* FragmentShader.glsl in Resources */,
+				EED8F64A2830E0C300E6C12C /* Main.storyboard in Resources */,
+				EED8F6672830E5CF00E6C12C /* nx.hdr in Resources */,
+				EED8F6682830E5CF00E6C12C /* ny.hdr in Resources */,
+				EED8F6692830E5CF00E6C12C /* nz.hdr in Resources */,
+				EED8F66A2830E5CF00E6C12C /* px.hdr in Resources */,
+				EED8F66B2830E5CF00E6C12C /* py.hdr in Resources */,
+				EED8F66C2830E5CF00E6C12C /* pz.hdr in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EE02FD0F24F76EE9005A662D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EE544D692533396000B00C7E /* AAPLMathUtilities.m in Sources */,
+				EE482ED22826A5500041C469 /* CubeMeshRH.swift in Sources */,
+				EE02FD1724F76EE9005A662D /* AppDelegate.swift in Sources */,
+				EE02FD2724F76F7B005A662D /* CubemapRenderer.swift in Sources */,
+				EE02FD1924F76EE9005A662D /* ViewController.swift in Sources */,
+				EE61B7F924F7B298009338D9 /* Shaders.metal in Sources */,
+				EE36D84D2558A24B00CA1B8F /* Mesh.swift in Sources */,
+				EE36D84F2558A29B00CA1B8F /* BoxMesh.swift in Sources */,
+				EE57A27228273BBD0013509F /* MTKTextureLoader+HDR.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EE7454B3282C7E97005B99F0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EE7454CB282C7F4E005B99F0 /* Shaders.metal in Sources */,
+				EE7454CA282C7F4E005B99F0 /* CubemapRenderer.swift in Sources */,
+				EE7454BC282C7E97005B99F0 /* ViewController.swift in Sources */,
+				EE7454BA282C7E97005B99F0 /* AppDelegate.swift in Sources */,
+				EE7454CC282C7F8C005B99F0 /* AAPLMathUtilities.m in Sources */,
+				EE7454CD282C7F93005B99F0 /* MTKTextureLoader+HDR.m in Sources */,
+				EE7454CE282C7FAD005B99F0 /* CubeMeshRH.swift in Sources */,
+				EE7454CF282C7FB0005B99F0 /* BoxMesh.swift in Sources */,
+				EE7454D0282C7FB5005B99F0 /* Mesh.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EE8A4252282B63E700A831A9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EE8A426A282B649B00A831A9 /* CubemapRenderer.swift in Sources */,
+				EE8A425B282B63E700A831A9 /* ViewController.swift in Sources */,
+				EE8A4259282B63E700A831A9 /* AppDelegate.swift in Sources */,
+				EE8A426F282B650500A831A9 /* BoxMesh.swift in Sources */,
+				EE8A426B282B64D900A831A9 /* CubeMeshRH.swift in Sources */,
+				EE8A426C282B64DC00A831A9 /* Mesh.swift in Sources */,
+				EE8A4269282B649B00A831A9 /* Shaders.metal in Sources */,
+				EE8A426D282B64E700A831A9 /* MTKTextureLoader+HDR.m in Sources */,
+				EE8A426E282B64ED00A831A9 /* AAPLMathUtilities.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EED8F60A2830DE0300E6C12C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EED8F6572830E0DA00E6C12C /* AppDelegate.swift in Sources */,
+				EED8F63B2830E00800E6C12C /* OpenGLRenderer.swift in Sources */,
+				EED8F63D2830E00800E6C12C /* OpenGLViewController.swift in Sources */,
+				EED8F6412830E04000E6C12C /* LoadHDR.m in Sources */,
+				EED8F6592830E10500E6C12C /* AAPLMathUtilities.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EED8F6222830DECA00E6C12C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EED8F64C2830E0C300E6C12C /* AppDelegate.swift in Sources */,
+				EED8F63C2830E00800E6C12C /* OpenGLRenderer.swift in Sources */,
+				EED8F63E2830E00800E6C12C /* OpenGLViewController.swift in Sources */,
+				EED8F6422830E04000E6C12C /* LoadHDR.m in Sources */,
+				EED8F65A2830E10E00E6C12C /* AAPLMathUtilities.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		EE02FD1C24F76EEA005A662D /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EE02FD1D24F76EEA005A662D /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		EE7454BF282C7E9A005B99F0 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EE7454C0282C7E9A005B99F0 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		EE8A425E282B63EA00A831A9 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EE8A425F282B63EA00A831A9 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		EED8F6432830E0C300E6C12C /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EED8F6442830E0C300E6C12C /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		EED8F6482830E0C300E6C12C /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EED8F6492830E0C300E6C12C /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		EED8F6532830E0DA00E6C12C /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EED8F6542830E0DA00E6C12C /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		EE02FD2124F76EEA005A662D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		EE02FD2224F76EEA005A662D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+			};
+			name = Release;
+		};
+		EE02FD2424F76EEA005A662D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = Crossmap/Crossmap.entitlements;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = Crossmap/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				PRODUCT_BUNDLE_IDENTIFIER = "Incremental-Innovation.MetalCrossmap";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Crossmap/Crossmap-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
+			};
+			name = Debug;
+		};
+		EE02FD2524F76EEA005A662D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = Crossmap/Crossmap.entitlements;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = Crossmap/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				PRODUCT_BUNDLE_IDENTIFIER = "Incremental-Innovation.MetalCrossmap";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Crossmap/Crossmap-Bridging-Header.h";
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
+			};
+			name = Release;
+		};
+		EE7454C4282C7E9A005B99F0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Crossmap3/Crossmap3.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = Crossmap3/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = incremental.innovation.Crossmap3;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Crossmap3/Crossmap3-Bridging-Header.h";
+				SWIFT_VERSION = 4.0;
+			};
+			name = Debug;
+		};
+		EE7454C5282C7E9A005B99F0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Crossmap3/Crossmap3.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = Crossmap3/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = incremental.innovation.Crossmap3;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Crossmap3/Crossmap3-Bridging-Header.h";
+				SWIFT_VERSION = 4.0;
+			};
+			name = Release;
+		};
+		EE8A4263282B63EA00A831A9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Crossmap2/Crossmap2.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = Crossmap2/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = incremental.innovation.Crossmap2;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Crossmap2/Crossmap2-Bridging-Header.h";
+				SWIFT_VERSION = 4.0;
+			};
+			name = Debug;
+		};
+		EE8A4264282B63EA00A831A9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Crossmap2/Crossmap2.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = Crossmap2/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = incremental.innovation.Crossmap2;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Crossmap2/Crossmap2-Bridging-Header.h";
+				SWIFT_VERSION = 4.0;
+			};
+			name = Release;
+		};
+		EED8F61C2830DE0700E6C12C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = "OGL-Crossmaps/Application/macOS/Crossmap-macOS.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = "OGL-Crossmaps/Application/macOS/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				PRODUCT_BUNDLE_IDENTIFIER = "Incremental-Innovation.Crossmap-macOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "OGL-Crossmaps/Application/Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		EED8F61D2830DE0700E6C12C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = "OGL-Crossmaps/Application/macOS/Crossmap-macOS.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = "OGL-Crossmaps/Application/macOS/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				PRODUCT_BUNDLE_IDENTIFIER = "Incremental-Innovation.Crossmap-macOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "OGL-Crossmaps/Application/Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		EED8F6362830DECC00E6C12C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = "OGL-Crossmaps/Application/iOS/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Incremental-Innovation.Crossmap-iOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SDKROOT = iphoneos;
+				SWIFT_OBJC_BRIDGING_HEADER = "OGL-Crossmaps/Application/Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		EED8F6372830DECC00E6C12C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = "OGL-Crossmaps/Application/iOS/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Incremental-Innovation.Crossmap-iOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SDKROOT = iphoneos;
+				SWIFT_OBJC_BRIDGING_HEADER = "OGL-Crossmaps/Application/Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EE02FD0E24F76EE9005A662D /* Build configuration list for PBXProject "Crossmaps" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EE02FD2124F76EEA005A662D /* Debug */,
+				EE02FD2224F76EEA005A662D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EE02FD2324F76EEA005A662D /* Build configuration list for PBXNativeTarget "Crossmap" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EE02FD2424F76EEA005A662D /* Debug */,
+				EE02FD2524F76EEA005A662D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EE7454C6282C7E9A005B99F0 /* Build configuration list for PBXNativeTarget "Crossmap3" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EE7454C4282C7E9A005B99F0 /* Debug */,
+				EE7454C5282C7E9A005B99F0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EE8A4265282B63EA00A831A9 /* Build configuration list for PBXNativeTarget "Crossmap2" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EE8A4263282B63EA00A831A9 /* Debug */,
+				EE8A4264282B63EA00A831A9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EED8F61B2830DE0700E6C12C /* Build configuration list for PBXNativeTarget "Crossmap-macOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EED8F61C2830DE0700E6C12C /* Debug */,
+				EED8F61D2830DE0700E6C12C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EED8F6352830DECC00E6C12C /* Build configuration list for PBXNativeTarget "Crossmap-iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EED8F6362830DECC00E6C12C /* Debug */,
+				EED8F6372830DECC00E6C12C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = EE02FD0B24F76EE9005A662D /* Project object */;
+}
