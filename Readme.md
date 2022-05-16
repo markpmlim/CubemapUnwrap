@@ -2,6 +2,8 @@ This project consists of 5 Demos all giving the same output: a 4:3 horizontal cr
 
 Rationale: Many shaders posted on the Internet are written in GLSL. The NDC systems, view port coordinate systems and texture coordinate systems of OpenGL and Metal are different. However, cubemaps must follow the Renderman specifications.
 
+![screenshot](RendermanCubemap.png)
+
 <br />
 <br />
 <br />
@@ -38,19 +40,29 @@ When all the various states are configured, the initializer of the class Cubemap
 
 The 6 squares of the resulting horizontal cubic crossmap has the following texture coordinates.
 
+```
+
                 texture coordinates of the 4 corners.
-face           top left             top right           bottom right        bottom left
-+X             (0.50, 0.333)    (0.75, 0.333),     (0.75, 0.667)       (0.50, 0.667)
--X              (0.00, 0.333)    (0.25, 0.333),     (0.25, 0.667)       (0.00, 0.667)
-+Y             (0.25, 0.000)    (0.50, 0.000),     (0.50, 0.333)       (0.25, 0.333)
--Y              (0.25, 0.667)    (0.50, 0.667),     (0.50, 1.000)       (0.25, 1.000)
-+Z             (0.25, 0.333)    (0.50, 0.333),     (0.50, 0.667)       (0.25, 0.667)
--Z              (0.75, 0.333)    (1.00, 0.333),     (1.00, 0.667)       (0.75, 0.667)
+                
+| :---: | :---: | :---:| :---:| :---:|
+| face | top left | top right | bottom right | bottom left |
+| +X | (0.50, 0.333) | (0.75, 0.333) | (0.75, 0.667) | (0.50, 0.667) |
+| -X | (0.00, 0.333) | (0.25, 0.333) | (0.25, 0.667) | (0.00, 0.667) |
+| +Y | (0.25, 0.000) | (0.50, 0.000) | (0.50, 0.333) | (0.25, 0.333) |
+| -Y | (0.25, 0.667) | (0.50, 0.667) | (0.50, 1.000) | (0.25, 1.000) |
+| +Z | (0.25, 0.333) | (0.50, 0.333) | (0.50, 0.667) | (0.25, 0.667) |
+| -Z | (0.75, 0.333) | (1.00, 0.333) | (1.00, 0.667) | (0.75, 0.667) |
 
 
 
 The kernel function (named compute) will transform the texture coordinates of each face of the crossmap to a direction vector which is used to access the correct face of the cubemap texture. The table above will be useful when it comes to understanding the algorithm adopted by the kernel function.  
 (Hint: 0.25 = 1/4, 0.50 = 1/2, 0.75 = 3/4, 0.333 = 1/3 and 0.667 = 2/3)
+
+The following table shows the mapping of textures coordinates to positions of the six 2D faces of the cubemap.
+
+![screenshot](LookupTable.png)
+
+
 
 There is a bug when compiled and run under macOS 10.13.x. The colour of four of the faces (+X, -X, +Z, -Z) might not be correct if the images are of type .png. The colorPixelFormat of the instance of MTKView is MTLPixelFormatRGBA16Float. One possible solution is to pass the 6 MTLTextures to a kernel function to convert the 8-bit colours to 16-bit (half) floats before instantiating the textureCube descriptor.
 
@@ -82,11 +94,13 @@ Furthermore, the textures of the six faces of the cubemap are vertically flipped
 
 **Demo 4 & 5: OGL-Crossmaps**
 
-The OpenGL and OpenGL-ES versions of Crossmap. The major part of the code was ported from Apple's "MigratingOpenGLCodeToMetal" project. The requirements for these 2 applications are set to run on macOS 10.12.x or later , Swift 3.0 or later.
+The OpenGL and OpenGL-ES versions of Crossmap. The major part of the code was ported from Apple's "MigratingOpenGLCodeToMetal" project. The requirements for these 2 applications are set to run on macOS 10.12.x or later, Swift 3.0 or later.
 
 The GLSL shaders are tested with OpenGL 3.2 or later and OpenGL ES 3.0.
 
 OpenGL's texture coordinate system has its origin at the bottom left with the u-axis from left to right horizontally and the v-axis vertically up.  This texture coordinate system is different from the Renderman standard. To calculate the direction to a face of the cubemap, the figure below can be used as a guide.
+
+![screenshot](OGLCubemap.png)
 
 
 **Requirements:** XCode 9.x, Swift 4.x and macOS 10.13.4 or later.
