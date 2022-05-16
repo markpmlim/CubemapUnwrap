@@ -42,9 +42,9 @@ The 6 squares of the resulting horizontal cubic crossmap has the following textu
 
 ```
 
-                texture coordinates of the 4 corners.
+| :---: | texture coordinates of the 4 corners. |
                 
-| :---: | :---: | :---:| :---:| :---:|
+| :---: | :---: | :---: | :---: | :---: |
 | face | top left | top right | bottom right | bottom left |
 | +X | (0.50, 0.333) | (0.75, 0.333) | (0.75, 0.667) | (0.50, 0.667) |
 | -X | (0.00, 0.333) | (0.25, 0.333) | (0.25, 0.667) | (0.00, 0.667) |
@@ -53,7 +53,7 @@ The 6 squares of the resulting horizontal cubic crossmap has the following textu
 | +Z | (0.25, 0.333) | (0.50, 0.333) | (0.50, 0.667) | (0.25, 0.667) |
 | -Z | (0.75, 0.333) | (1.00, 0.333) | (1.00, 0.667) | (0.75, 0.667) |
 
-
+```
 
 The kernel function (named compute) will transform the texture coordinates of each face of the crossmap to a direction vector which is used to access the correct face of the cubemap texture. The table above will be useful when it comes to understanding the algorithm adopted by the kernel function.  
 (Hint: 0.25 = 1/4, 0.50 = 1/2, 0.75 = 3/4, 0.333 = 1/3 and 0.667 = 2/3)
