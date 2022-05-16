@@ -42,9 +42,9 @@ The 6 squares of the resulting horizontal cubic crossmap has the following textu
 
 ```
 
-| :---: | texture coordinates of the 4 corners. |
-                
-| :---: | :---: | :---: | :---: | :---: |
+| --- | texture coordinates of the 4 corners. |
+
+| --- | --- | --- | --- | --- |
 | face | top left | top right | bottom right | bottom left |
 | +X | (0.50, 0.333) | (0.75, 0.333) | (0.75, 0.667) | (0.50, 0.667) |
 | -X | (0.00, 0.333) | (0.25, 0.333) | (0.25, 0.667) | (0.00, 0.667) |
