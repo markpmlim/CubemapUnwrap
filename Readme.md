@@ -71,7 +71,7 @@ Possible bug: a thin vertical white line is displayed; it is probably to roundin
 
 **Demo 2: Crossmap2**
 
-Instead of using a kernel function, a pair of vertex-fragment shader functions is used. A kernel function can compute the colours of a small rectangular grid of pixels in parallel. When a  pair of vertex-fragment functions is used, the fragment function is called for every pixel whose colour needs to be computed. 
+Instead of using a kernel function, a pair of vertex-fragment shader functions is used. A kernel function can compute the colours of a small rectangular grid of pixels in parallel. When a  pair of vertex-fragment functions is used, the fragment function is called for every pixel whose colour needs to be computed. If there are 720 x 540 pixels, then the function is called 388 800 times.
 
 
 <br />
@@ -84,7 +84,7 @@ This is a modification of Demo2. XCode has an option called "New Cube Texture Se
 
         newTexture(name, scaleFactor, bundle:, options:)
 
-which can be used to load and create an instance of MTLTexture of type MTLTextureTypeCube. HDR files cannot be dropped into the Assets.xcassets folder; XCode only accepts a small number of graphic images e.g. png, jpg etc. Xcode will compress images in the Assets.xcassets folder  into a file named "Assets.car".
+which can be used to load and create an instance of MTLTexture of type MTLTextureTypeCube. HDR files cannot be dropped into the Assets.xcassets folder; XCode only accepts a small number of graphic formats e.g. png, jpg etc. Xcode will compress images in the Assets.xcassets folder into a file named "Assets.car".
 
 Furthermore, the textures of the six faces of the cubemap are vertically flipped when passed to the fragment function.
 
@@ -94,9 +94,9 @@ Furthermore, the textures of the six faces of the cubemap are vertically flipped
 
 **Demo 4 & 5: OGL-Crossmaps**
 
-The OpenGL and OpenGL-ES versions of Crossmap. The major part of the code was ported from Apple's "MigratingOpenGLCodeToMetal" project. The requirements for these 2 applications are set to run on macOS 10.12.x or later, Swift 3.0 or later.
+The OpenGL and OpenGL-ES versions of Crossmap. The major part of the Swift code was ported from Apple's "MigratingOpenGLCodeToMetal" project. The requirements for these 2 applications are set to run on macOS 10.12.x or later, Swift 3.0 or later.
 
-The GLSL shaders are tested with OpenGL 3.2 or later and OpenGL ES 3.0.
+The GLSL shaders are tested with OpenGL 3.2 or later and OpenGL ES 3.0. The version directive of both the vertex and fragment shaders are prepended to their original source files. 
 
 OpenGL's texture coordinate system has its origin at the bottom left with the u-axis from left to right horizontally and the v-axis vertically up.  This texture coordinate system is different from the Renderman standard. To calculate the direction to a face of the cubemap, the figure below can be used as a guide.
 
