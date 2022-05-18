@@ -34,9 +34,9 @@ to create a 3D cube MTLTextureDescriptor object which is passed on to the  MTLDe
 
 which will allocate a texture object with privately owned storage.
 
-Next, we need to setup and configure an instance of MTLRenderPassDescriptor which is used to render the six 2D images to a cubemap using layer rendering. Next, an instance of MTLRenderPipelineState must be created and configured for layer rendering.
+Next, we need to setup and configure an instance of MTLRenderPassDescriptor which is used to render the six 2D images to a cubemap using layer rendering. An instance of MTLRenderPipelineState must be created and configured for layer rendering.
 
-When all the various states are configured, the initializer of the class CubemapRenderer calls a renderer to capture the cubemap texture. Once the cubemap texture is created, it is passed to a kernel function to output a horizontal (4:3) horizontal cross cubemap.
+When all the various states are configured, the initializer of the class CubemapRenderer calls a function "createCubemapTexture" to capture the cubemap texture. Once the cubemap texture is created, it is passed to a kernel function to output a horizontal (4:3) horizontal cross cubemap.
 
 The 6 squares of the resulting horizontal cross cubemap has the following texture coordinates.  The table below lists the texture coordinates of the 4 corners of each face on the horizontal cross cubemap. (The v-axis is vertically down for Metal's Texture Coordinate System.)
 
@@ -52,7 +52,7 @@ The 6 squares of the resulting horizontal cross cubemap has the following textur
 
 
 
-The kernel function (named compute) will transform the texture coordinates of each face of the cross cubemap to a direction vector which is used to access the correct face of the cubemap texture. The table above will be useful when it comes to understanding the algorithm adopted by the kernel function.  
+The kernel function (named "compute") will transform the texture coordinates of each face of the cross cubemap to a direction vector which is used to access the correct face of the cubemap texture. The table above will be useful when it comes to understanding the algorithm adopted by the original author of the shader code.
 (Hint: 0.25 = 1/4, 0.50 = 1/2, 0.75 = 3/4, 0.333 = 1/3 and 0.667 = 2/3)
 
 The following table shows the mapping of textures coordinates to positions of the six 2D faces of the cubemap.
@@ -61,9 +61,9 @@ The following table shows the mapping of textures coordinates to positions of th
 
 
 
-There is a bug when compiled and run under macOS 10.13.x. The colour of four of the faces (+X, -X, +Z, -Z) might not be correct if the images are of type .png. The colorPixelFormat of the instance of MTKView is MTLPixelFormatRGBA16Float. One possible solution is to pass the 6 MTLTextures to a kernel function to convert the 8-bit colours to 16-bit (half) floats before instantiating the textureCube descriptor.
+There is a bug when compiled and run under macOS 10.13.x. The colours of four of the faces (+X, -X, +Z, -Z) might not be correct if the images are of type .png. The colorPixelFormat of the instance of MTKView has been set to MTLPixelFormatRGBA16Float. One possible solution is to pass the 6 MTLTextures to another kernel function to convert the 8-bit colours to 16-bit (half) floats before instantiating the textureCube descriptor.
 
-Possible bug: a thin vertical white line is displayed; it is probably to rounding errors. To work around this, minor modifications to the original shader code are made.
+Possible bug: a thin vertical white line is displayed; it is probably to rounding errors. To work around this, minor modifications to the original shader code are made. Compare this source code with fragment shader function of Demo 2.
 
 <br />
 <br />
@@ -71,7 +71,7 @@ Possible bug: a thin vertical white line is displayed; it is probably to roundin
 
 **Demo 2: Crossmap2**
 
-Instead of using a kernel function, a pair of vertex-fragment shader functions is used. A kernel function can compute the colours of a small rectangular grid of pixels in parallel. When a  pair of vertex-fragment functions is used, the fragment function is called whenever the colour of each pixel needs to be computed.
+Instead of using a kernel function, a pair of vertex-fragment shader functions is used. A kernel function can compute the colours of a small rectangular grid of pixels in parallel. When a  pair of vertex-fragment functions is used, the fragment function is called for every pixel whose colour needs to be computed. 
 
 
 <br />
