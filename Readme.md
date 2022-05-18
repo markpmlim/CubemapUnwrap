@@ -1,6 +1,6 @@
 This project consists of 5 Demos all giving the same output: a 4:3 horizontal cross cubemap.
 
-Rationale: Many shaders posted on the Internet are written in GLSL. The NDC systems, view port coordinate systems and texture coordinate systems of OpenGL and Metal are different. However, cubemaps must follow the Renderman specifications.
+Rationale: Many shaders posted on the Internet are written in GLSL. The NDC systems, view port coordinate systems and texture coordinate systems of OpenGL and Metal are different. However, cubemaps in all platforms must follow the Renderman specifications.
 
 ![screenshot](RendermanCubemap.png)
 
@@ -8,7 +8,7 @@ Rationale: Many shaders posted on the Internet are written in GLSL. The NDC syst
 <br />
 <br />
 
-**Demo 1: Crossmap.** 
+**Demo 1: Crossmap** 
 
 This demo shows how to load six 8-bit or 16-bit color images. Currently only 16-bit .hdr images are supported and they are loaded using an external C-header library available widely on the Internet. This library can also load .png and .jpg images but this demo uses the built-in MTKTextureLoader functions to accomplish the task. The MTKTextureLoader function 
 
@@ -17,10 +17,10 @@ This demo shows how to load six 8-bit or 16-bit color images. Currently only 16-
         newTextures(URLs, options:, error:)
 ```
 
-can load images via a list of URLs and return an array of MTLTextures.
+can load images via a list of URLs and returns an array of MTLTextures.
 
 
-The following MTLTextureDescriptor class function is then  called
+The following MTLTextureDescriptor class function is then called
 
 ```swift
         textureCubeDescriptor(pixelFormat:, size:, mipmapped:)
@@ -34,14 +34,14 @@ to create a 3D cube MTLTextureDescriptor object which is passed on to the  MTLDe
 
 which will allocate a texture object with privately owned storage.
 
-We need to setup and configure an instance of MTLRenderPassDescriptor which is used to render a cubemap using layer rendering. Next, an instance of MTLRenderPipelineState must be created and configured for layer rendering.
+Next, we need to setup and configure an instance of MTLRenderPassDescriptor which is used to render the six 2D images to a cubemap using layer rendering. Next, an instance of MTLRenderPipelineState must be created and configured for layer rendering.
 
-When all the various states are configured, the initializer of the class CubemapRenderer calls a renderer to capture the cubemap texture . Once the cubemap texture is created, it is passed to a kernel function to output a horizontal (4:3) cubic crossmap.
+When all the various states are configured, the initializer of the class CubemapRenderer calls a renderer to capture the cubemap texture. Once the cubemap texture is created, it is passed to a kernel function to output a horizontal (4:3) horizontal cross cubemap.
 
-The 6 squares of the resulting horizontal cubic crossmap has the following texture coordinates.  The table below lists the texture coordinates of the 4 corners of each face on the horizontal cross cubemap. (The t-axis is vertically down for Metal Texture Coordinate System.)
+The 6 squares of the resulting horizontal cross cubemap has the following texture coordinates.  The table below lists the texture coordinates of the 4 corners of each face on the horizontal cross cubemap. (The v-axis is vertically down for Metal's Texture Coordinate System.)
 
 
-| face  |   top left   |   top right  | bottom right |  bottom left |
+| Face  |   Top Left   |   Top Right  | Bottom Right |  Bottom Left |
 | :---: | :---: | :---:|:---:|:---:|
 |   +X  | (0.50, 0.333) | (0.75, 0.333) | (0.75, 0.667) | (0.50, 0.667) |
 |   -X  | (0.00, 0.333) | (0.25, 0.333) | (0.25, 0.667) | (0.00, 0.667) |
@@ -52,7 +52,7 @@ The 6 squares of the resulting horizontal cubic crossmap has the following textu
 
 
 
-The kernel function (named compute) will transform the texture coordinates of each face of the crossmap to a direction vector which is used to access the correct face of the cubemap texture. The table above will be useful when it comes to understanding the algorithm adopted by the kernel function.  
+The kernel function (named compute) will transform the texture coordinates of each face of the cross cubemap to a direction vector which is used to access the correct face of the cubemap texture. The table above will be useful when it comes to understanding the algorithm adopted by the kernel function.  
 (Hint: 0.25 = 1/4, 0.50 = 1/2, 0.75 = 3/4, 0.333 = 1/3 and 0.667 = 2/3)
 
 The following table shows the mapping of textures coordinates to positions of the six 2D faces of the cubemap.
