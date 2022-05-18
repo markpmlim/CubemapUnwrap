@@ -38,18 +38,17 @@ We need to setup and configure an instance of MTLRenderPassDescriptor which is u
 
 When all the various states are configured, the initializer of the class CubemapRenderer calls a renderer to capture the cubemap texture . Once the cubemap texture is created, it is passed to a kernel function to output a horizontal (4:3) cubic crossmap.
 
-The 6 squares of the resulting horizontal cubic crossmap has the following texture coordinates.  texture coordinates of the 4 corners.
+The 6 squares of the resulting horizontal cubic crossmap has the following texture coordinates.  The table below lists the texture coordinates of the 4 corners of each face on the horizontal cross cubemap. (The t-axis is vertically down for Metal Texture Coordinate System.)
 
 
 | face  |   top left   |   top right  | bottom right |  bottom left |
 | :---: | :---: | :---:|:---:|:---:|
-|   +X  | (0.50,0.333) | (0.75,0.333) | (0.75,0.667) | (0.50,0.667) |
-|   -X  | (0.00,0.333) | (0.25,0.333) | (0.25,0.667) | (0.00,0.667) |
-|   +Y  | (0.25,0.000) | (0.50,0.000) | (0.50,0.333) | (0.25,0.333) |
-|   -Y  | (0.25,0.667) | (0.50,0.667) | (0.50,1.000) | (0.25,1.000) |
-|   +Z  | (0.25,0.333) | (0.50,0.333) | (0.50,0.667) | (0.25,0.667) |
-|   -Z  | (0.75,0.333) | (1.00,0.333) | (1.00,0.667) | (0.75,0.667) |
-
+|   +X  | (0.50, 0.333) | (0.75, 0.333) | (0.75, 0.667) | (0.50, 0.667) |
+|   -X  | (0.00, 0.333) | (0.25, 0.333) | (0.25, 0.667) | (0.00, 0.667) |
+|   +Y  | (0.25, 0.000) | (0.50, 0.000) | (0.50, 0.333) | (0.25, 0.333) |
+|   -Y  | (0.25, 0.667) | (0.50, 0.667) | (0.50, 1.000) | (0.25, 1.000) |
+|   +Z  | (0.25, 0.333) | (0.50, 0.333) | (0.50, 0.667) | (0.25, 0.667) |
+|   -Z  | (0.75, 0.333) | (1.00, 0.333) | (1.00, 0.667) | (0.75, 0.667) |
 
 
 
