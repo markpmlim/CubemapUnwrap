@@ -88,6 +88,9 @@ which can be used to load and create an instance of MTLTexture of type MTLTextur
 
 Furthermore, the textures of the six faces of the cubemap are vertically flipped when passed to the fragment function.
 
+<br />
+<br />
+<br />
 
 **Demo 4 & 5: OGL-Crossmaps**
 
