@@ -36,17 +36,13 @@ which will allocate a texture object with privately owned storage.
 
 We need to setup and configure an instance of MTLRenderPassDescriptor which is used to render a cubemap using layer rendering. Next, an instance of MTLRenderPipelineState must be created and configured for layer rendering.
 
-When all the various states are configured, the initializer of the class CubemapRenderer calls a renderer to capture the cubemap texture . Once the cubemap texture is created, it is passed to a kernel function to output a horizontal (4:3) cubic crossmap
+When all the various states are configured, the initializer of the class CubemapRenderer calls a renderer to capture the cubemap texture . Once the cubemap texture is created, it is passed to a kernel function to output a horizontal (4:3) cubic crossmap.
 
-The 6 squares of the resulting horizontal cubic crossmap has the following texture coordinates.
-
- texture coordinates of the 4 corners.
-
-
-```
+The 6 squares of the resulting horizontal cubic crossmap has the following texture coordinates.  texture coordinates of the 4 corners.
 
 
 | face  |   top left   |   top right  | bottom right |  bottom left |
+| :---: | :---: | :---:|:---:|:---:|
 |   +X  | (0.50,0.333) | (0.75,0.333) | (0.75,0.667) | (0.50,0.667) |
 |   -X  | (0.00,0.333) | (0.25,0.333) | (0.25,0.667) | (0.00,0.667) |
 |   +Y  | (0.25,0.000) | (0.50,0.000) | (0.50,0.333) | (0.25,0.333) |
@@ -55,7 +51,7 @@ The 6 squares of the resulting horizontal cubic crossmap has the following textu
 |   -Z  | (0.75,0.333) | (1.00,0.333) | (1.00,0.667) | (0.75,0.667) |
 
 
-```
+
 
 The kernel function (named compute) will transform the texture coordinates of each face of the crossmap to a direction vector which is used to access the correct face of the cubemap texture. The table above will be useful when it comes to understanding the algorithm adopted by the kernel function.  
 (Hint: 0.25 = 1/4, 0.50 = 1/2, 0.75 = 3/4, 0.333 = 1/3 and 0.667 = 2/3)
