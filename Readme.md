@@ -1,5 +1,7 @@
 This project consists of 5 Demos all giving the same output: a 4:3 horizontal cross cubemap.
 
+![screenshot](ExpectedOutput.png)
+
 Rationale: Many shaders posted on the Internet are written in GLSL. The NDC systems, view port coordinate systems and texture coordinate systems of OpenGL and Metal are different. However, cubemaps in all platforms must follow the Renderman specifications.
 
 ![screenshot](RendermanCubemap.png)
