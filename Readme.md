@@ -54,7 +54,7 @@ The 6 squares of the resulting horizontal cross cubemap has the following textur
 
 
 
-The kernel function (named "compute") will transform the texture coordinates of each face of the cross cubemap to a direction vector which is used to access the correct face of the cubemap texture. The table above will be useful when it comes to understanding the algorithm adopted by the original author of the shader code.
+The kernel function (named "compute") will transform the texture coordinates of each face of the cross cubemap to a direction vector which is used to access the correct face of the cubemap texture. The table above will be useful when it comes to understanding the algorithm designed by the original author of the shader code.<br />
 (Hint: 0.25 = 1/4, 0.50 = 1/2, 0.75 = 3/4, 0.333 = 1/3 and 0.667 = 2/3)
 
 The following table shows the mapping of textures coordinates to positions of the six 2D faces of the cubemap.
@@ -63,7 +63,8 @@ The following table shows the mapping of textures coordinates to positions of th
 
 
 
-There is a bug when compiled and run under macOS 10.13.x. The colours of four of the faces (+X, -X, +Z, -Z) might not be correct if the images are of type .png. The colorPixelFormat of the instance of MTKView has been set to MTLPixelFormatRGBA16Float. One possible solution is to pass the 6 MTLTextures to another kernel function to convert the 8-bit colours to 16-bit (half) floats before instantiating the textureCube descriptor.
+There is a bug when this demo is compiled and run under macOS 10.13.x. The colours of four of the faces (+X, -X, +Z, -Z) might not be correct if the images are of type .png. The colorPixelFormat of the instance of MTKView has been set to MTLPixelFormatRGBA16Float. The six 2D textures instantiated has the pixel format MTLPixelFormatBGRA8Unorm.
+One possible solution is to pass the 6 MTLTextures to another kernel function to convert the 8-bit colours to 16-bit (half) floats before instantiating the textureCube descriptor.
 
 Possible bug: a thin vertical white line is displayed; it is probably to rounding errors. To work around this, minor modifications to the original shader code are made. Compare this source code with fragment shader function of Demo 2.
 
